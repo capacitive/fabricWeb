@@ -57,6 +57,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\view\PLCEditForm.js" />
+    <Content Include="app\view\Agvs.js" />
+    <Content Include="app\view\MainView.js" />
+    <Content Include="app\view\PLCDataPackets.js" />
+    <Content Include="app\view\PLCs.js" />
+    <Content Include="app\view\Routes.js" />
+    <Content Include="app\view\Zones.js" />
+    <Content Include="index.html" />
+    <Content Include="app.js" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="scripts\jquery-2.1.1.min.map" />
     <None Include="Web.Debug.config">
@@ -76,7 +85,7 @@
     <Content Include="css\jquery-ui.theme.css" />
     <Content Include="css\jquery-ui.theme.min.css" />
     <Content Include="css\MainTheme.css" />
-    <Content Include="index.html" />
+    <Content Include="onepage.html" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\ext-theme-neptune.js" />
@@ -130,7 +139,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>9886</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:9886/</IISUrl>
+          <IISUrl>http://localhost:4553</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -7,23 +7,7 @@
             this.getStore().reload();
         }
     },
-    store: {
-        fields: ['number', 'residentAGVNumber', 'residentAGVBatteryLevel'
-        ],
-        autoLoad: true,
-        autoSync: true,
-        proxy: {
-            type: 'rest',
-            url: baseRESTAddress + 'agvroutes/5/tags',
-            reader: {
-                type: 'json',
-                root: 'data'
-            }
-        },
-        sorters: [
-            { property: 'number' }
-        ]
-    },
+    store: 'routestore',
     columns: [
         {
             xtype: 'gridcolumn',

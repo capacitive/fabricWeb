@@ -1,4 +1,4 @@
-﻿var baseRESTAddress = 'http://192.168.1.200/tmmc.agv.webapi/Api/';
+﻿var baseRESTAddress = 'http://192.168.1.200/tmmc_agv_web/Api/';
 
 Ext.Loader.setConfig({
     enabled: true
@@ -7,6 +7,15 @@ Ext.Loader.setConfig({
 Ext.application({
     name: 'tags',
     requires: ['tags.view.MainView'],
+    stores: [
+        'zonestore',
+        'routestore',
+        'plcstore',
+        'routestore'
+    ],
+    models:[
+        'plc'
+    ],
     views:[
         'Routes',
         'Zones',

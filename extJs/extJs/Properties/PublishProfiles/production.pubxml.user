@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\__TMMC TAGS\WebUI</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="app.js">
+      <publishTime>11/07/2014 18:54:40</publishTime>
+    </File>
+    <File Include="app/model/plc.js">
+      <publishTime>11/07/2014 18:45:28</publishTime>
+    </File>
+    <File Include="app/model/route.js">
+      <publishTime>11/07/2014 18:54:23</publishTime>
+    </File>
+    <File Include="app/model/tag.js">
+      <publishTime>11/07/2014 18:41:50</publishTime>
+    </File>
+    <File Include="app/model/zone.js">
+      <publishTime>11/08/2014 05:40:37</publishTime>
+    </File>
+    <File Include="app/store/plcstore.js">
+      <publishTime>11/07/2014 18:48:35</publishTime>
+    </File>
+    <File Include="app/store/routestore.js">
+      <publishTime>11/07/2014 18:54:36</publishTime>
+    </File>
+    <File Include="app/store/tagstore.js">
+      <publishTime>11/07/2014 18:16:41</publishTime>
+    </File>
+    <File Include="app/store/zonestore.js">
+      <publishTime>11/07/2014 18:53:12</publishTime>
+    </File>
+    <File Include="app/view/Agvs.js">
+      <publishTime>11/07/2014 12:16:55</publishTime>
+    </File>
+    <File Include="app/view/MainView.js">
+      <publishTime>11/07/2014 13:02:12</publishTime>
+    </File>
+    <File Include="app/view/PLCDataPackets.js">
+      <publishTime>11/07/2014 12:18:31</publishTime>
+    </File>
+    <File Include="app/view/PLCEditForm.js">
+      <publishTime>11/07/2014 13:08:52</publishTime>
+    </File>
+    <File Include="app/view/PLCs.js">
+      <publishTime>11/07/2014 18:35:43</publishTime>
+    </File>
+    <File Include="app/view/Routes.js">
+      <publishTime>11/07/2014 18:38:13</publishTime>
+    </File>
+    <File Include="app/view/ZoneEditForm.js">
+      <publishTime>11/08/2014 05:43:04</publishTime>
+    </File>
+    <File Include="app/view/Zones.js">
+      <publishTime>11/08/2014 05:42:25</publishTime>
+    </File>
+    <File Include="bin/extJs.dll">
+      <publishTime>11/08/2014 06:21:10</publishTime>
+    </File>
+    <File Include="css/ext-theme-classic.css">
+      <publishTime>11/06/2014 23:55:11</publishTime>
+    </File>
+    <File Include="css/ext-theme-neptune.css">
+      <publishTime>11/06/2014 23:55:11</publishTime>
+    </File>
+    <File Include="css/jquery-ui.css">
+      <publishTime>11/06/2014 23:55:11</publishTime>
+    </File>
+    <File Include="css/jquery-ui.min.css">
+      <publishTime>11/06/2014 23:55:11</publishTime>
+    </File>
+    <File Include="css/jquery-ui.structure.css">
+      <publishTime>11/06/2014 23:55:11</publishTime>
+    </File>
+    <File Include="css/jquery-ui.structure.min.css">
+      <publishTime>11/06/2014 23:55:11</publishTime>
+    </File>
+    <File Include="css/jquery-ui.theme.css">
+      <publishTime>11/06/2014 23:55:11</publishTime>
+    </File>
+    <File Include="css/jquery-ui.theme.min.css">
+      <publishTime>11/06/2014 23:55:11</publishTime>
+    </File>
+    <File Include="css/MainTheme.css">
+      <publishTime>11/06/2014 23:55:11</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>11/07/2014 12:44:12</publishTime>
+    </File>
+    <File Include="scripts/bootstrap.js">
+      <publishTime>09/23/2014 08:26:31</publishTime>
+    </File>
+    <File Include="scripts/bootstrap.min.js">
+      <publishTime>09/23/2014 08:26:31</publishTime>
+    </File>
+    <File Include="scripts/ext-theme-neptune.js">
+      <publishTime>11/06/2014 23:55:11</publishTime>
+    </File>
+    <File Include="scripts/extJS-5.0.0-all.js">
+      <publishTime>11/06/2014 23:55:11</publishTime>
+    </File>
+    <File Include="scripts/extJS4-2-1-all.js">
+      <publishTime>11/06/2014 23:55:12</publishTime>
+    </File>
+    <File Include="scripts/images/ui-bg_diagonals-thick_90_eeeeee_40x40.png">
+      <publishTime>11/06/2014 23:55:12</publishTime>
+    </File>
+    <File Include="scripts/images/ui-bg_flat_15_cd0a0a_40x100.png">
+      <publishTime>11/06/2014 23:55:12</publishTime>
+    </File>
+    <File Include="scripts/images/ui-bg_glass_100_e4f1fb_1x400.png">
+      <publishTime>11/06/2014 23:55:12</publishTime>
+    </File>
+    <File Include="scripts/images/ui-bg_glass_50_3baae3_1x400.png">
+      <publishTime>11/06/2014 23:55:12</publishTime>
+    </File>
+    <File Include="scripts/images/ui-bg_glass_80_d7ebf9_1x400.png">
+      <publishTime>11/06/2014 23:55:12</publishTime>
+    </File>
+    <File Include="scripts/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png">
+      <publishTime>11/06/2014 23:55:12</publishTime>
+    </File>
+    <File Include="scripts/images/ui-bg_highlight-hard_70_000000_1x100.png">
+      <publishTime>11/06/2014 23:55:12</publishTime>
+    </File>
+    <File Include="scripts/images/ui-bg_highlight-soft_100_deedf7_1x100.png">
+      <publishTime>11/06/2014 23:55:12</publishTime>
+    </File>
+    <File Include="scripts/images/ui-bg_highlight-soft_25_ffef8f_1x100.png">
+      <publishTime>11/06/2014 23:55:12</publishTime>
+    </File>
+    <File Include="scripts/images/ui-icons_2694e8_256x240.png">
+      <publishTime>11/06/2014 23:55:12</publishTime>
+    </File>
+    <File Include="scripts/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>11/06/2014 23:55:12</publishTime>
+    </File>
+    <File Include="scripts/images/ui-icons_3d80b3_256x240.png">
+      <publishTime>11/06/2014 23:55:12</publishTime>
+    </File>
+    <File Include="scripts/images/ui-icons_72a7cf_256x240.png">
+      <publishTime>11/06/2014 23:55:12</publishTime>
+    </File>
+    <File Include="scripts/images/ui-icons_ffffff_256x240.png">
+      <publishTime>11/06/2014 23:55:12</publishTime>
+    </File>
+    <File Include="scripts/jquery-1.10.2.js">
+      <publishTime>09/23/2014 08:26:31</publishTime>
+    </File>
+    <File Include="scripts/jquery-1.10.2.min.js">
+      <publishTime>09/23/2014 08:26:31</publishTime>
+    </File>
+    <File Include="scripts/jquery-1.10.2.min.map">
+      <publishTime>09/23/2014 08:26:31</publishTime>
+    </File>
+    <File Include="scripts/jquery-2.1.1.js">
+      <publishTime>11/06/2014 23:55:12</publishTime>
+    </File>
+    <File Include="scripts/jquery-2.1.1.min.js">
+      <publishTime>11/06/2014 23:55:12</publishTime>
+    </File>
+    <File Include="scripts/jquery-2.1.1.min.map">
+      <publishTime>11/06/2014 23:55:12</publishTime>
+    </File>
+    <File Include="scripts/jquery-ui-1.11.1.js">
+      <publishTime>11/06/2014 23:55:12</publishTime>
+    </File>
+    <File Include="scripts/jquery-ui.min-1.11.1.js">
+      <publishTime>11/06/2014 23:55:12</publishTime>
+    </File>
+    <File Include="scripts/jquery.signalR-2.0.2.js">
+      <publishTime>10/22/2014 22:17:28</publishTime>
+    </File>
+    <File Include="scripts/jquery.signalR-2.0.2.min.js">
+      <publishTime>10/22/2014 22:17:28</publishTime>
+    </File>
+    <File Include="scripts/modernizr-2.6.2.js">
+      <publishTime>09/23/2014 08:26:31</publishTime>
+    </File>
+    <File Include="scripts/respond.js">
+      <publishTime>09/23/2014 08:26:31</publishTime>
+    </File>
+    <File Include="scripts/respond.min.js">
+      <publishTime>09/23/2014 08:26:31</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/08/2014 06:21:10</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

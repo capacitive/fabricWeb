@@ -12,28 +12,7 @@
         }
     },
 
-    store: {
-        fields: ['id',
-            {
-                name: 'ipAddress'
-            },
-            'port',
-            'description'
-        ],
-        autoLoad: true,
-        autoSync: true,
-        proxy: {
-            type: 'rest',
-            url: baseRESTAddress + 'plc',
-            reader: {
-                type: 'json',
-                root: 'data'
-            }
-        },
-        sorters: [
-            { property: 'ipAddress' }
-        ]
-    },
+    store: 'plcstore',
     columns: [
         {
             xtype: 'gridcolumn',

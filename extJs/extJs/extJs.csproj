@@ -57,17 +57,27 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\model\plc.js" />
+    <Content Include="app\model\route.js" />
+    <Content Include="app\model\tag.js" />
+    <Content Include="app\model\zone.js" />
+    <Content Include="app\store\plcstore.js" />
+    <Content Include="app\store\routestore.js" />
+    <Content Include="app\store\tagstore.js" />
+    <Content Include="app\store\zonestore.js" />
     <Content Include="app\view\PLCEditForm.js" />
     <Content Include="app\view\Agvs.js" />
     <Content Include="app\view\MainView.js" />
     <Content Include="app\view\PLCDataPackets.js" />
     <Content Include="app\view\PLCs.js" />
     <Content Include="app\view\Routes.js" />
+    <Content Include="app\view\ZoneEditForm.js" />
     <Content Include="app\view\Zones.js" />
     <Content Include="index.html" />
     <Content Include="app.js" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="scripts\jquery-2.1.1.min.map" />
+    <None Include="Properties\PublishProfiles\production.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -85,7 +95,6 @@
     <Content Include="css\jquery-ui.theme.css" />
     <Content Include="css\jquery-ui.theme.min.css" />
     <Content Include="css\MainTheme.css" />
-    <Content Include="onepage.html" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\ext-theme-neptune.js" />
@@ -124,6 +133,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

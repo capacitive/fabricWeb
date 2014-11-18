@@ -4,39 +4,13 @@
     listeners: {
         itemdblclick: function (gridpanel, record, item, e) {
             //debugger;
-            var formWindow = Ext.create('ZoneEditForm');
+            var formWindow = Ext.create('tags.view.ZoneEditForm');
             var theForm = formWindow.down('form');
             theForm.loadRecord(record);
             formWindow.show();
         }
     },
-    store: {
-        fields: ['id',
-            {
-                name: 'name',
-                sortType: 'asUCText'
-            },
-            'zoneType',
-            'enabled',
-            'description',
-            'flatStopTags',
-            'flatIntersectionTags',
-            'tags'],
-        autoLoad: true,
-        autoSync: true,
-        proxy: {
-            type: 'rest',
-            url: baseRESTAddress + 'zone?includeTags=true',
-            reader: {
-                type: 'json',
-                root: 'data'
-            }
-        },
-        sorters: [
-            { property: 'name' }
-        ],
-        groupField: 'zoneType'
-    },
+    store: 'zonestore',
     columns: [
         {
             xtype: 'gridcolumn',
@@ -47,12 +21,17 @@
         {
             xtype: 'gridcolumn',
             text: 'Type',
-            dataIndex: 'zoneType'
+            dataIndex: 'zoneTypeName'
         },
         {
             xtype: 'gridcolumn',
             text: 'Active',
             dataIndex: 'enabled'
+        },
+        {
+            xtype: 'gridcolumn',
+            text: 'Priority',
+            dataIndex: 'priority'
         },
         {
             xtype: 'gridcolumn',
@@ -65,11 +44,11 @@
             text: 'Intersections',
             dataIndex: 'flatIntersectionTags',
             flex: 1
-        },
-        {
-            xtype: 'gridcolumn',
-            text: 'Tag Array',
-            dataIndex: 'tags'
-        }
+        }//,
+        //{
+        //    xtype: 'gridcolumn',
+        //    text: 'Tag Array',
+        //    dataIndex: 'tags'
+        //}
     ]
 });

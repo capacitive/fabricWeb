@@ -14,7 +14,7 @@
     <RootNamespace>extJs</RootNamespace>
     <AssemblyName>extJs</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\controllers\ZoneController.js" />
     <Content Include="app\model\plc.js" />
     <Content Include="app\model\route.js" />
     <Content Include="app\model\tag.js" />
@@ -71,13 +72,16 @@
     <Content Include="app\view\PLCDataPackets.js" />
     <Content Include="app\view\PLCs.js" />
     <Content Include="app\view\Routes.js" />
+    <Content Include="app\view\ZoneAndon.html" />
     <Content Include="app\view\ZoneEditForm.js" />
     <Content Include="app\view\Zones.js" />
     <Content Include="index.html" />
     <Content Include="app.js" />
+    <Content Include="scripts\fabric.js" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="scripts\jquery-2.1.1.min.map" />
     <None Include="Properties\PublishProfiles\production.pubxml" />
+    <Content Include="scripts\fabric-custom.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -149,7 +153,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>9886</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:4553</IISUrl>
+          <IISUrl>http://192.168.1.200/tmmc.agv.web</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

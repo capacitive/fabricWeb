@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>agv andon</title>
+    <script src="../../scripts/jquery-2.1.1.js" type="text/javascript"></script>
+    <script src="../../scripts/jquery-2.1.1.intellisense.js" type="text/javascript"></script>
+    <script src="../../scripts/jquery-ui-1.11.1.js" type="text/javascript"></script>
+    <script src="../../scripts/fabric.js"></script>
+    <link href="../../css/MainTheme.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="andonForm" runat="server">
+        <!--<h2>Minomi PICK</h2>-->
+        <div id="minomiPick" class="areaBox">      
+            <canvas id="a" height="500" width="1885"></canvas>  
+        </div>
+        
+        <!--<h2>Minomi LINESIDE</h2>-->
+        <div id="minomiPick" class="areaBox" style="margin-top: 10px">
+            <canvas id="b" height="500" width="1885"></canvas> 
+        </div>
+    </form>
+
+    <table id="console" class="consoleLayout">
+        <tr>
+            <td>x: </td>
+            <td><input type="text" id="x" class="textbox"/></td>
+            <td>y: </td>
+            <td><input type="text" id="y" class="textbox" /></td>
+            <td class="tagStorageBox">
+                <div id="tag212" class="stopTag">
+                    <div id="tag212Content" class="tagBoxContent">212</div>
+                </div>
+
+                <div id="tag316" class="stopTag">
+                    <div id="tag316Content" class="tagBoxContent">316</div>
+                </div>
+
+                <div id="tag399" class="stopTag">
+                    <div id="tag399Content" class="tagBoxContent">399</div>
+                </div>
+
+                <div id="tag414" class="intersectionTag">
+                    <div id="tag414Content" class="tagBoxContent">414</div>
+                </div>
+
+                <div id="tag412" class="intersectionTag">
+                    <div id="tag412Content" class="tagBoxContent">412</div>
+                </div>
+
+                <div id="tag413" class="intersectionTag">
+                    <div id="tag413Content" class="tagBoxContent">413</div>
+                </div>
+
+                <div id="tag213" class="intersectionTag">
+                    <div id="tag213Content" class="tagBoxContent">213</div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <!--draggable tags-->
+    <script type="text/javascript">
+        $(function() {
+            $("#tag212").draggable({ drag: function(event, ui) {
+                $("#x").val(ui.position.left);
+                $("#y").val(ui.position.top);
+            } });
+            $("#tag316").draggable({
+                drag: function (event, ui) {
+                    $("#x").val(ui.position.left);
+                    $("#y").val(ui.position.top);
+                }
+            });
+            $("#tag399").draggable({
+                drag: function (event, ui) {
+                    $("#x").val(ui.position.left);
+                    $("#y").val(ui.position.top);
+                }
+            });
+            $("#tag414").draggable({
+                drag: function (event, ui) {
+                    $("#x").val(ui.position.left);
+                    $("#y").val(ui.position.top);
+                }
+            });
+            $("#tag412").draggable({
+                drag: function (event, ui) {
+                    $("#x").val(ui.position.left);
+
+                    $("#y").val(ui.position.top);
+                }
+            });
+            $("#tag413").draggable({
+                drag: function (event, ui) {
+                    $("#x").val(ui.position.left);
+
+                    $("#y").val(ui.position.top);
+                }
+            });
+            $("#tag213").draggable({
+                drag: function (event, ui) {
+                    $("#x").val(ui.position.left);
+
+                    $("#y").val(ui.position.top);
+                }
+            });
+        });
+    </script>
+
+    <!--track grid A -->
+    <script type="text/javascript">
+        var canvas_a = new fabric.Canvas('a', { selection: false });
+        var grid = 100;
+
+        // create grid
+
+        for (var i = 0; i < (2000 / grid) ; i++) {
+            canvas_a.add(new fabric.Line([i * grid, 0, i * grid, 500], { stroke: '#ccc', selectable: false }));
+            canvas_a.add(new fabric.Line([0, i * grid, 2000, i * grid], { stroke: '#ccc', selectable: false }));
+        }
+
+        
+
+        function cloneMapTile(type) {
+            if (type == 'straight') {
+                console.log('cloning a straight tile');
+                canvas_a.add(new fabric.Rect({
+                    left: 600,
+                    top: 0,
+                    width: 200,
+                    height: 100,
+                    fill: '#c0c0c0',
+                    originX: 'left',
+                    originY: 'top',
+                    centeredRotation: true
+                }));
+            }
+
+            if (type == 'intersect') {
+                canvas_a.add(new fabric.Rect({
+                    left: 200,
+                    top: 0,
+                    width: 100,
+                    height: 100,
+                    fill: '#c0c0c0',
+                    originX: 'left',
+                    originY: 'top',
+                    centeredRotation: true
+                }));
+            }
+        };
+
+        // add objects
+        //straight tile
+        var straight = new fabric.Rect({
+            left: 0,
+            top: 0,
+            width: 200,
+            height: 100,
+            fill: '#c0c0c0',
+            originX: 'left',
+            originY: 'top',
+            centeredRotation: true
+        });
+        //straight tile move event
+        straight.on('selected', function() {
+            console.log('selected a straight tile');
+            cloneMapTile('straight');
+        });
+        canvas_a.add(straight);
+
+        //intersect tile
+        var intersect = canvas_a.add(new fabric.Rect({
+            left: 200,
+            top: 0,
+            width: 100,
+            height: 100,
+            fill: '#ccc',
+            originX: 'left',
+            originY: 'top',
+            centeredRotation: true         
+        }));
+        //branch tile
+        canvas.add(new fabric.Rect({
+            left: 300,
+            top: 0,
+            width: 100,
+            height: 100,
+            fill: '#c0c0c0',
+            originX: 'left',
+            originY: 'top',
+            centeredRotation: true
+        }));
+        //branchExtend tile
+        canvas.add(new fabric.Rect({
+            left: 400,
+            top: 0,
+            width: 100,
+            height: 100,
+            fill: '#ccc',
+            originX: 'left',
+            originY: 'top',
+            centeredRotation: true
+        }));
+        //curve tile
+        canvas.add(new fabric.Rect({
+            left: 500,
+            top: 0,
+            width: 100,
+            height: 100,
+            fill: '#ccc',
+            originX: 'left',
+            originY: 'top',
+            centeredRotation: true
+        }));
+
+        // snap to grid
+        canvas.on('object:moving', function (options) {
+            options.target.set({
+                left: Math.round(options.target.left / grid) * grid,
+                top: Math.round(options.target.top / grid) * grid
+            });
+        });
+    </script>
+    
+    <!--track grid B -->
+    <script type="text/javascript">
+        var canvas = new fabric.Canvas('b', { selection: false });
+        var grid = 100;
+
+        // create grid
+
+        for (var i = 0; i < (2000 / grid) ; i++) {
+            canvas.add(new fabric.Line([i * grid, 0, i * grid, 500], { stroke: '#ccc', selectable: false }));
+            canvas.add(new fabric.Line([0, i * grid, 2000, i * grid], { stroke: '#ccc', selectable: false }));
+        }
+
+        // add objects
+        canvas.add(new fabric.Rect({
+            left: 0,
+            top: 0,
+            width: 200,
+            height: 100,
+            fill: '#c0c0c0',
+            originX: 'left',
+            originY: 'top',
+            centeredRotation: true
+        }));
+        canvas.add(new fabric.Rect({
+            left: 200,
+            top: 0,
+            width: 100,
+            height: 100,
+            fill: '#ccc',
+            originX: 'left',
+            originY: 'top',
+            centeredRotation: true
+        }));
+        canvas.add(new fabric.Rect({
+            left: 300,
+            top: 0,
+            width: 100,
+            height: 100,
+            fill: '#c0c0c0',
+            originX: 'left',
+            originY: 'top',
+            centeredRotation: true
+        }));
+        canvas.add(new fabric.Rect({
+            left: 400,
+            top: 0,
+            width: 100,
+            height: 100,
+            fill: '#ccc',
+            originX: 'left',
+            originY: 'top',
+            centeredRotation: true
+        }));
+
+        // snap to grid
+        canvas.on('object:moving', function (options) {
+            options.target.set({
+                left: Math.round(options.target.left / grid) * grid,
+                top: Math.round(options.target.top / grid) * grid
+            });
+        });
+    </script>
+</body>
+</html>
